@@ -5,9 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { API } from './logic.js';
 
 let displayResult1 = function(body) {
-// debugger;
   let practices = body.data;
-  console.log(practices.length);
   for ( let i=0; i<practices.length; i++) {
     $('#output').append("<li>" + practices[i].profile.first_name + ", " + practices[i].profile.last_name +  " " + practices[i].profile.title + "</li>");
   }
@@ -48,7 +46,6 @@ $(document).ready(function() {
 
     promise.then(function(response) {
       const body = JSON.parse(response);
-      // console.log(body.data);
       let practices = body.data;
       if (practices.length === 0) {
         alert("Oops, that input didn't match any results.");
@@ -82,14 +79,12 @@ $(document).ready(function() {
       const body = JSON.parse(response);
       // console.log(body.data);
       let practi = body.data;
-      console.log(practi.length);
       if (practi.length === 0){
         alert("Oops, that input didn't match any results.");
       } else {
       for ( let i=0; i<practi.length; i++) {
         $('#byNameList').append("<li>" + practi[i].profile.first_name + ", " + practi[i].profile.last_name +  " " + practi[i].profile.title + "; Address: "  + practi[i].practices[0].visit_address.street + ", " + practi[i].practices[0].visit_address.city + "Oregon;  Telephone: " + practi[i].practices[0].phones[0].number + "; Accepting New Patients: " + practi[i].practices[0].accepts_new_patients + "; " + practi[i].practices[0].website + ";" + "</li>");
         }
-        // console.log(practi[i].practices[0].website);
       }
     }, function(error) {
       $('#byNameList').text(`There was an error loading your request: ${error.responseText}.  Please try again.`);

@@ -16,7 +16,6 @@ class API {
     });
     promise.then(function(response) {
       const body = JSON.parse(response);
-      console.log(body.bikes);
       displayResult1(body);
     }, function(error) {
       displayError1(error);
