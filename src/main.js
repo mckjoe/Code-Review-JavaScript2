@@ -4,6 +4,15 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 $(document).ready(function() {
+  $("#inPortland").click(function() {
+    $("#search-in-portland").toggle();
+  });
+  $("#bySymptom").click(function() {
+    $("#search-by-symptom").toggle();
+  });
+  $("#byName").click(function() {
+    $("#search-by-name").toggle();
+  });
   $("#listDoctors").click(function() {
     let promise = new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
@@ -29,6 +38,35 @@ $(document).ready(function() {
       console.log(practices);
     }, function(error) {
       $('#output').text(`There was an error loading your request: ${error.responseText}.  Please try again.`);
+    });
+  });
+  $("#searchSymptom").submit(function(event) {
+    event.preventDefault();
+    let symptomName = $("#symptomName").val();
+    let promise = new Promise(function(resolve, reject) {
+      let request = new XMLHttpRequest();
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptomName}&location=or-portland&skip=0&limit=5&user_key=${process.env.exports.apiKey}`;
+      request.onload = function() {
+        if (this.status === 200) {
+          resolve(request.response);
+        } else {
+          reject(Error(request.statusText));
+        }
+      };
+      request.open("GET", url, true);
+      request.send();
+    });
+
+    promise.then(function(response) {
+      const body = JSON.parse(response);
+      // console.log(body.data);
+      let practices = body.data;
+      for ( let i=0; i<practices.length; i++) {
+        $('#bySymptomList').append("<li>" + practices[i].profile.first_name + ", " + practices[i].profile.last_name +  " " + practices[i].profile.title + "</li>");
+        console.log(practices[i].profile.first_name);
+      }
+    }, function(error) {
+      $('#bySymptomList').text(`There was an error loading your request: ${error.responseText}.  Please try again.`);
     });
   });
   $("#searchName").submit(function(event) {
