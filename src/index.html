@@ -6,10 +6,27 @@
   </head>
   <body>
     <h3>Welcome to Doctor Finder</h3>
-    <h5>Please click below to see a list of doctors in your area (Portland)</h5>
-    <button id="listDoctors">create list</button>
-    <div class="doctors">
-      <ol id="output">
+    <div id="buttonOptions">
+      <button>Search in Portland</button>
+      <button>Search by symptom</button>
+      <button>Search by name</button>
+    </div>
+    <div id="search-in-portland">
+      <h5>Please click below to see a list of doctors in your area (Portland)</h5>
+      <button id="listDoctors">create list</button>
+      <div class="doctors">
+        <ol id="output">
+
+        </ol>
+      </div>
+    </div>
+    <div id="search-by-name">
+      <form id="searchName">
+        <label for="doctorName">Please enter the doctors name you would like to search for:</label><br>
+        <input id="doctorName" type="text" placeholder="'john'">
+        <button type="submit">Search names</button>
+      </form>
+      <ol id=byNameList>
 
       </ol>
     </div>

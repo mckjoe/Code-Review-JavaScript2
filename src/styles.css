@@ -1,3 +1,12 @@
-body {
-  background-color: red;
+#buttonOptions button {
+  background-color: lightblue;
+  color: maroon;
+}
+
+/* input {
+  margin-bottom: 10px;
+} */
+
+li {
+  margin-bottom: 15px;
 }
