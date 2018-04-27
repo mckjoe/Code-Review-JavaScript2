@@ -9,6 +9,11 @@ h3 {
 
 li {
   margin-bottom: 15px;
+  background-color: lightpink;
+}
+
+li:nth-child(odd) {
+  background-color: lightblue;
 }
 
 .wrapper {
@@ -30,7 +35,7 @@ li {
 }
 
 #search-in-portland {
-  /*  text-align: center; */
+  text-align: center;
   border: 1px solid lightblue;
   padding: 10px;
   margin: 25px 0 25px 0;
