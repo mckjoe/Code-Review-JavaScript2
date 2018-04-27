@@ -15,8 +15,9 @@ return a list of multiple doctors in portlan on click| click | list of doctors
 narrow down doctors list based on entered symptom | cold | list of doctors
 enter doctor name and view information about that doctor | frank | list of doctors meeting criteria "frank"
 
-###Developers
-Developers will need to got to BetterDoctors API to get an API_key to be able to make edits to the code and to change the returned information from the API source.  Follow their instructions to recieve a key.
+### Developers
+
+Developers will need to go to BetterDoctors API to get an API_key to be able to build this webpage.  Follow their instructions to recieve a key.
 
 ## Setup/Installation Requirements
 ### To setup this project:
