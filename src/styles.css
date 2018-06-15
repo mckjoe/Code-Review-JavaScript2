@@ -1,6 +1,6 @@
 @media screen and (max-width: 799px) {
   .nav-bar li:hover {
-    transform: scale(0);
+    /* transform: scale(0); */
   }
 
   .banner-text h1 {
@@ -11,7 +11,7 @@
   }
 
   button:hover {
-    transform: scale(1) !important;
+    color: black;
   }
 }
 
@@ -83,7 +83,7 @@
 
 .nav-bar li:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  color: yellowgreen;
 }
 
 .banner-text {
@@ -179,83 +179,8 @@ ol {
 button:hover {
   cursor: pointer;
   background-color: yellowgreen;
-  transform: scale(1.1);
 }
 
 strong {
   color: yellowgreen;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* body {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-h3 {
-  text-align: center;
-}
-
-li {
-  margin-bottom: 15px;
-  background-color: lightpink;
-}
-
-li:nth-child(odd) {
-  background-color: lightblue;
-}
-
-.wrapper {
-  width: 800px;
-  border: 2px solid lightpink;
-  padding: 15px 25px;
-  margin: 25px auto;
-}
-
-#buttonOptions {
-  width: 450px;
-  margin: 0 auto;
-}
-
-#buttonOptions button {
-  width: auto;
-  background-color: lightblue;
-  color: maroon;
-}
-
-#search-in-portland {
-  text-align: center;
-  border: 1px solid lightblue;
-  padding: 10px;
-  margin: 25px 0 25px 0;
-  display: none;
-}
-
-#search-by-name {
-  text-align: center;
-  border: 1px solid lightblue;
-  padding: 10px;
-  margin: 25px 0 25px 0;
-  display: none;
-}
-
-#search-by-symptom {
-  text-align: center;
-  border: 1px solid lightblue;
-  padding: 10px;
-  margin: 25px 0 25px 0;
-  display: none;
-} */
