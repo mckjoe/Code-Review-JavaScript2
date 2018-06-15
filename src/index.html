@@ -24,22 +24,48 @@
         <div class="search-option box1">
           <img src="http://healthathomeconsultants.com/wp-content/uploads/2016/02/img_15.jpg" alt="Dr holding patients hand">
           <p>Search doctors by name</p>
-          <button type="click" id="search-name" class="button">SEARCH</button>
+          <button type="click" id="search-name" class="button">SELECT</button>
         </div>
         <div class="search-option box1">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrBe7TMgR5hG640UPdGSTweHBf-tty7KLVzsFYNQNRNvcCs80_" alt="image of a stefoscope">
           <p>Search doctors by symptom</p>
-          <button type="click" id="search-symptom" class="button">SEARCH</button>
+          <button type="click" id="search-symptom" class="button">SELECT</button>
         </div>
         <div class="search-option box1">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK8-GHmWmFQx2H3SJzcRx4NUhRYKGUUjgC64Sp1MsgGtCFrzjm" alt="dr and patient">
           <p>Search doctors around Portland</p>
-          <button type="click" id="search-location" class="button">SEARCH</button>
+          <button type="click" id="search-location" class="button">SELECT</button>
         </div>
       </div>
-      <ol class="output">
+      <div id="search-in-portland" class="doctors-available">
+        <p>Search doctors near Portland:</p>
+        <button id="listDoctors">Search</button>
+        <div class="doctors">
+          <ol id="output">
 
-      </ol>
+          </ol>
+        </div>
+      </div>
+      <div id="search-by-symptom" class="doctors-available">
+        <form id="searchSymptom">
+          <label for="symptomName">Search doctors by symptom:</label><br>
+          <input id="symptomName" type="text" placeholder="'stomach ache'">
+          <button type="submit">Search</button>
+        </form>
+        <ol id=bySymptomList>
+
+        </ol>
+      </div>
+      <div id="search-by-name" class="doctors-available">
+        <form id="searchName">
+          <label for="doctorName">Search doctors by name:</label><br>
+          <input id="doctorName" type="text" placeholder="'john'">
+          <button type="submit">Search</button>
+        </form>
+        <ol id=byNameList>
+
+        </ol>
+      </div>
 
 
     </div>
@@ -57,35 +83,6 @@
 
 
 
-      <div id="search-in-portland">
-        <p>Please click below to see a list of doctors in your area (Portland)</p>
-        <button id="listDoctors">create list</button>
-        <div class="doctors">
-          <ol id="output">
-
-          </ol>
-        </div>
-      </div>
-      <div id="search-by-symptom">
-        <form id="searchSymptom">
-          <label for="symptomName">Please enter the symptom you need help with:</label><br>
-          <input id="symptomName" type="text" placeholder="'stomach ache'">
-          <button type="submit">Search symptoms</button>
-        </form>
-        <ol id=bySymptomList>
-
-        </ol>
-      </div>
-      <div id="search-by-name">
-        <form id="searchName">
-          <label for="doctorName">Please enter the doctors name you would like to search for:</label><br>
-          <input id="doctorName" type="text" placeholder="'john'">
-          <button type="submit">Search names</button>
-        </form>
-        <ol id=byNameList>
-
-        </ol>
-      </div>
     </div> -->
   </body>
 </html>

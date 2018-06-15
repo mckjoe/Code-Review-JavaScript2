@@ -1,5 +1,5 @@
 .wrapper {
-
+  color: gray
 }
 
 .nav-bar {
@@ -36,6 +36,7 @@
 }
 
 .banner-text {
+  color: black;
   grid-column: 3 / 4;
   grid-row: 1 / 2;
   z-index: 999;
@@ -58,7 +59,7 @@
 .search-option {
   width: 30%;
   margin-top: 15px;
-  border: 1px solid black;
+  border: 1px solid gray;
 }
 
 .search-option img {
@@ -77,9 +78,43 @@
   margin: 0 auto 10px auto;
 }
 
+#search-in-portland {
+  display: none;
+}
 
+#search-by-symptom {
+  display: none;
+}
 
+#search-by-name {
+  display: none;
+}
 
+.doctors-available {
+  border: 1px solid yellowgreen;
+  width: 50%;
+  margin: 15px auto;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+}
+
+.doctors-available input {
+  display: block;
+  margin: 10px auto;
+  /* text-align: center; */
+}
+
+.doctors-available li {
+  border: 1px solid gray;
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+strong {
+  color: yellowgreen;
+}
 
 
 
