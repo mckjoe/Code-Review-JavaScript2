@@ -1,8 +1,8 @@
 import './styles.css';
 import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { API } from './logic.js';
+// import 'bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import { API } from './logic.js';
 
 // let displayResult1 = function(body) {
 //   let practices = body.data;
@@ -13,16 +13,17 @@ import { API } from './logic.js';
 // let displayError1 = function(error) {
 //   $("#output").text(`There was an error processing your request: ${error.message}`);
 // }
-// $(document).ready(function() {
-//   $("#inPortland").click(function() {
-//     $("#search-in-portland").toggle();
-//   });
-//   $("#bySymptom").click(function() {
-//     $("#search-by-symptom").toggle();
-//   });
-//   $("#byName").click(function() {
-//     $("#search-by-name").toggle();
-//   });
+$(document).ready(function() {
+  $("#search-location").click(function() {
+    $("#search-in-portland").toggle();
+  });
+  $("#search-symptom").click(function() {
+    $("#search-by-symptom").toggle();
+  });
+  $("#search-name").click(function() {
+    $("#search-by-name").toggle();
+  });
+
 //   $("#listDoctors").click(function() {
 //     let api = new API();
 //     api.makeCall(displayResult1, displayError1);
@@ -90,4 +91,4 @@ import { API } from './logic.js';
 //       $('#byNameList').text(`There was an error loading your request: ${error.responseText}.  Please try again.`);
 //     });
 //   });
-// });
+});
