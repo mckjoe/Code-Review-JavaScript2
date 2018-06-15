@@ -35,6 +35,11 @@
   opacity: 1;
 }
 
+.nav-bar li:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .banner-text {
   color: black;
   grid-column: 3 / 4;
@@ -102,14 +107,27 @@
 .doctors-available input {
   display: block;
   margin: 10px auto;
-  /* text-align: center; */
+}
+
+ol {
+  list-style: none;
+  width: 100%;
+  padding: 0;
 }
 
 .doctors-available li {
+  width: 80%;
+  display: block;
   border: 1px solid gray;
   text-align: left;
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto;
   padding: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: yellowgreen;
+  transform: scale(1.1);
 }
 
 strong {
