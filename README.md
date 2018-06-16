@@ -1,5 +1,8 @@
 # Doctor Finder
 
+## Deployed Site
+To view this site live, go to: https://dr-locator.firebaseapp.com
+
 #### This project will help sick people find nearby doctors. 04/27/2018
 
 #### By **Joseph McKinney**
